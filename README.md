@@ -113,6 +113,11 @@ This must be set before you assign an upload:
 @user.attributes = params[:user]
 ```
 
+To bypass backgrounding for a processor, you can set the delay option to false in an Uploader:
+```ruby
+process :fix_exif_rotation, delay: false
+```
+
 ### Override worker
 To override the worker in cases where additional methods need to be called or you have app specific requirements, pass the worker class as the
 second argument:
